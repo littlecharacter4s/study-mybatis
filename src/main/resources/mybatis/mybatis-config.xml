@@ -19,6 +19,6 @@
 	<mappers>
 		<!-- 映射文件存在MapperRegistry中 -->
 		<!-- xml映射文件，复杂情况好用 -->
-		<mapper resource="com/lc/mybatis/mapper/UserMapper.xml" />
+		<mapper resource="mybatis/mapper/UserMapper.xml" />
 	</mappers>
 </configuration>

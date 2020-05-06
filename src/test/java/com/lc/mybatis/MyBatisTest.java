@@ -79,7 +79,7 @@ public class MyBatisTest {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession(true);
 		try {
 			String uuid = UUID.randomUUID().toString();
-			User user = new User(uuid, "kityyyyyyy", 19);
+			User user = new User(uuid, "kity", 19);
 			UserMapper userMapper = session.getMapper(UserMapper.class);
 			userMapper.addUser(user);
 		} finally {
@@ -117,7 +117,7 @@ public class MyBatisTest {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
 		try {
 			UserMapper userMapper = session.getMapper(UserMapper.class);
-			User user = userMapper.getUser("1c2c9bac-e3c7-4d8f-a98f-3b2c9c19b1ec");
+			User user = userMapper.getUser("d3a6a180-a998-469e-b68f-2c3c38f7594c");
 			System.out.println(user.toString());
 		} finally {
 			session.close();
