@@ -11,7 +11,7 @@ import java.util.UUID;
 
 public class MyBatisTest {
 	@Test
-	public void createTest() {
+	public void testCreate() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession(true);
 		try {
 			String uuid = UUID.randomUUID().toString();
@@ -24,7 +24,7 @@ public class MyBatisTest {
 	}
 	
 	@Test
-	public void updateTest() {
+	public void testUpdate() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession(true);
 		try {
 			User user = session.selectOne("com.lc.mybatis.mapper.UserMapper.getUser", "1c2c9bac-e3c7-4d8f-a98f-3b2c9c19b1ec");
@@ -35,9 +35,20 @@ public class MyBatisTest {
 			session.close();
 		}
 	}
-	
+
 	@Test
-	public void deleteTest() {
+	public void testRead() {
+		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
+		try {
+			User user = session.selectOne("com.lc.mybatis.mapper.UserMapper.getUser", "1c2c9bac-e3c7-4d8f-a98f-3b2c9c19b1ec");
+			System.out.println(user.toString());
+		} finally {
+			session.close();
+		}
+	}
+
+	@Test
+	public void testDelete() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
 		try {
 			int result = session.delete("com.lc.mybatis.mapper.UserMapper.deleteUser", "08e6b39c-237f-49e2-9c65-2d90d1be7f97");
@@ -47,20 +58,9 @@ public class MyBatisTest {
 			session.close();
 		}
 	}
-
-	@Test
-	public void readTest() {
-		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
-		try {
-			User user = session.selectOne("com.lc.mybatis.mapper.UserMapper.getUser", "1c2c9bac-e3c7-4d8f-a98f-3b2c9c19b1ec");
-			System.out.println(user.toString());
-		} finally {
-			session.close();
-		}
-	}
 	
 	@Test
-	public void readAllTest() {
+	public void testReadAll() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
 		try {
 			List<User> userList = session.selectList("com.lc.mybatis.mapper.UserMapper.getAllUser");
@@ -75,7 +75,7 @@ public class MyBatisTest {
 	/**********************************************************************************************************/
 	
 	@Test
-	public void createTest2() {
+	public void testCreateWithMapper() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession(true);
 		try {
 			String uuid = UUID.randomUUID().toString();
@@ -88,7 +88,7 @@ public class MyBatisTest {
 	}
 	
 	@Test
-	public void updateTest2() {
+	public void testUpdateWithMapper() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession(true);
 		try {
 			UserMapper userMapper = session.getMapper(UserMapper.class);
@@ -101,7 +101,7 @@ public class MyBatisTest {
 	}
 	
 	@Test
-	public void deleteTest2() {
+	public void testDeleteWithMapper() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
 		try {
 			UserMapper userMapper = session.getMapper(UserMapper.class);
@@ -113,7 +113,7 @@ public class MyBatisTest {
 	}
 
 	@Test
-	public void readTest2() {
+	public void testReadWithMapper() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
 		try {
 			UserMapper userMapper = session.getMapper(UserMapper.class);
@@ -125,7 +125,7 @@ public class MyBatisTest {
 	}
 	
 	@Test
-	public void readAllTest2() {
+	public void testReadAllWithMapper() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
 		try {
 			UserMapper userMapper = session.getMapper(UserMapper.class);
