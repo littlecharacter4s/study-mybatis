@@ -18,6 +18,7 @@ public class JdbcTest {
         Class.forName(driver);
         // 2.获取数据库连接
         Connection connection = DriverManager.getConnection(url, username, password);
+        // connection.setAutoCommit(false);
         String sql = "select * from user where id = ? ";
         // 3.创建Statement对象（每一个Statement为一次数据库执行请求）
         PreparedStatement stmt = connection.prepareStatement(sql);
@@ -35,6 +36,7 @@ public class JdbcTest {
             }
             System.out.println(map);
         }
+        // connection.commit();
         // 7.各种关闭
         if (rs != null) {
             rs.close();
