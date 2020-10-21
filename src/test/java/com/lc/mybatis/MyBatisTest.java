@@ -36,7 +36,19 @@ public class MyBatisTest {
 		}
 	}
 
-	@Test
+    @Test
+    public void testDelete() {
+        SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
+        try {
+            int result = session.delete("com.lc.mybatis.mapper.UserMapper.deleteUser", "08e6b39c-237f-49e2-9c65-2d90d1be7f97");
+            session.commit();
+            System.out.println(result);
+        } finally {
+            session.close();
+        }
+    }
+
+    @Test
 	public void testRead() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
 		try {
@@ -47,18 +59,6 @@ public class MyBatisTest {
 		}
 	}
 
-	@Test
-	public void testDelete() {
-		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
-		try {
-			int result = session.delete("com.lc.mybatis.mapper.UserMapper.deleteUser", "08e6b39c-237f-49e2-9c65-2d90d1be7f97");
-			session.commit();
-			System.out.println(result);
-		} finally {
-			session.close();
-		}
-	}
-	
 	@Test
 	public void testReadAll() {
 		SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession();
