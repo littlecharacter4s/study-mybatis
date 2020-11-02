@@ -1,12 +1,14 @@
 package com.lc.mybatis;
 
 import com.lc.mybatis.domain.User;
+import com.lc.mybatis.mapper.TestMapper;
 import com.lc.mybatis.mapper.UserMapper;
 import com.lc.mybatis.utils.SqlSessionFactoryUtil;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.Test;
 
 import java.util.List;
+import java.util.Random;
 import java.util.UUID;
 
 public class MyBatisTest {
@@ -136,5 +138,41 @@ public class MyBatisTest {
 		} finally {
 			session.close();
 		}
+	}
+
+	@Test
+	public void testGenerateData() throws Exception {
+	    char[] mapper = "abcdefghijklmnopqrstuvwxyz".toCharArray();
+        Random random = new Random();
+        SqlSession session = SqlSessionFactoryUtil.getSqlSessionFactory().openSession(true);
+        try {
+            TestMapper testMapper = session.getMapper(TestMapper.class);
+            for (int i = 0; i < 100; i++) {
+                StringBuilder sb = new StringBuilder();
+                int l = random.nextInt(5) + 5;
+                for (int j = 0; j < l; j++) {
+                    sb.append(mapper[random.nextInt(mapper.length)]);
+                }
+
+                String name = sb.toString();
+                com.lc.mybatis.domain.Test test = new com.lc.mybatis.domain.Test();
+                test.setId(System.currentTimeMillis());
+                test.setName(name);
+                test.setPasswd("123456");
+                test.setIdNumber(String.valueOf(System.currentTimeMillis()));
+                test.setPhone(String.valueOf(random.nextInt(1000000000) + 18000000000L));
+                test.setEmail(name + "@qq.com");
+                test.setRealName(name);
+                test.setAge(random.nextInt(10) + 18);
+                test.setSex(random.nextInt(2));
+
+                // System.out.println(JSON.toJSONString(test));
+                System.out.println(i);
+
+                testMapper.insertSelective(test);
+            }
+        } finally {
+            session.close();
+        }
 	}
 }
