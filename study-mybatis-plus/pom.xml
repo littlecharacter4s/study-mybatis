@@ -11,5 +11,41 @@
 
     <artifactId>study-mybatis-plus</artifactId>
 
+    <dependencies>
+        <!--spring-boot-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <!--lombok-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+        </dependency>
+        <!--mybatis-plus-->
+        <!--<dependency>-->
+        <!--    <groupId>com.baomidou</groupId>-->
+        <!--    <artifactId>mybatis-plus-boot-starter</artifactId>-->
+        <!--    <version>3.3.2</version>-->
+        <!--</dependency>-->
+    </dependencies>
 
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 </project>
