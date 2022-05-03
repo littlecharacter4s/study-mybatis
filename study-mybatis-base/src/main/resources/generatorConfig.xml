@@ -13,8 +13,8 @@
         </commentGenerator>
 
         <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-                        connectionURL="jdbc:mysql://vps1:3306/db_micromall"
-                        userId="ct-gogo" password="ct-gogo"/>
+                        connectionURL="jdbc:mysql://rm-8vby2r2yqa14k8tumuo.mysql.zhangbei.rds.aliyuncs.com:3306/effect"
+                        userId="benxiaokang" password="Benxiaokang2022"/>
 
         <!-- 指定生成的类型为java类型，避免数据库中number等类型字段 -->
         <javaTypeResolver>
@@ -47,7 +47,12 @@
                <!--enableCountByExample="false"-->
                <!--enableUpdateByExample="false"-->
                <!--enableDeleteByExample="false"/>-->
-        <table tableName="mm_test" domainObjectName="Test"
+        <!--<table tableName="mm_test" domainObjectName="Test"-->
+        <!--       enableSelectByExample="false"-->
+        <!--       enableCountByExample="false"-->
+        <!--       enableUpdateByExample="false"-->
+        <!--       enableDeleteByExample="false"/>-->
+        <table tableName="log" domainObjectName="Log"
                enableSelectByExample="false"
                enableCountByExample="false"
                enableUpdateByExample="false"
