@@ -14,7 +14,7 @@ import java.util.Collections;
  * @author gujixian
  * @since 2022-05-05
  */
-public class MyBatisCodeGenerator {
+public class MyBatisGenerator {
     public static void main(String[] args) {
         String projectPath = System.getProperty("user.dir") + "/study-mybatis-plus";
         FastAutoGenerator.create("jdbc:mysql://rm-8vby2r2yqa14k8tumuo.mysql.zhangbei.rds.aliyuncs.com:3306/effect?characterEncoding=utf-8&useSSL=false", "benxiaokang", "Benxiaokang2022")
