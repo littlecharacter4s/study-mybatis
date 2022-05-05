@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.time.LocalDateTime;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,35 +21,26 @@ import lombok.Setter;
 @Getter
 @Setter
 @TableName("log")
+@ApiModel(value = "Log对象", description = "操作记录表")
 public class Log {
 
-    /**
-     * id
-     */
+    @ApiModelProperty("id")
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
-    /**
-     * 操作行为
-     */
+    @ApiModelProperty("操作行为")
     @TableField("action")
     private String action;
 
-    /**
-     * 操作信息
-     */
+    @ApiModelProperty("操作信息")
     @TableField("message")
     private String message;
 
-    /**
-     * 操作人id
-     */
+    @ApiModelProperty("操作人id")
     @TableField("operator_id")
     private Long operatorId;
 
-    /**
-     * 创建时间
-     */
+    @ApiModelProperty("创建时间")
     @TableField("create_time")
     private LocalDateTime createTime;
 

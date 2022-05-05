@@ -1,10 +1,18 @@
 package com.lc.mybatis.plus.mapper;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.lc.mybatis.plus.domain.Log;
-import org.springframework.stereotype.Repository;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import org.apache.ibatis.annotations.Mapper;
 
-
-@Repository
+/**
+ * <p>
+ * 操作记录表 Mapper 接口
+ * </p>
+ *
+ * @author gujixian
+ * @since 2022-05-05
+ */
+@Mapper
 public interface LogMapper extends BaseMapper<Log> {
+
 }
