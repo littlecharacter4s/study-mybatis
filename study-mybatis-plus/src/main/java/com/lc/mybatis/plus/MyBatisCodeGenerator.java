@@ -65,7 +65,7 @@ public class MyBatisCodeGenerator {
                             .controllerBuilder()
                             .enableRestStyle(); // 开启生成 @RestController
                 })
-                // .templateEngine(new FreemarkerTemplateEngine())
+                .templateEngine(new FreemarkerTemplateEngine())
                 .execute();
     }
 }
