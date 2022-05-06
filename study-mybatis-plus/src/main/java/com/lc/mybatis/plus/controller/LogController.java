@@ -1,9 +1,16 @@
 package com.lc.mybatis.plus.controller;
+import java.time.LocalDateTime;
 
 
+import com.lc.mybatis.plus.domain.Log;
+import com.lc.mybatis.plus.service.LogService;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -14,7 +21,24 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2022-05-05
  */
 @RestController
-@RequestMapping("/log")
+@RequestMapping
 public class LogController {
+    @Resource
+    private LogService logService;
 
+    @RequestMapping("/log")
+    public String log() {
+        List<Log> logList = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            Log log = new Log();
+            log.setId(i + 1L);
+            log.setAction(i + "");
+            log.setMessage(i + "");
+            log.setOperatorId(i + 1L);
+            log.setCreateTime(LocalDateTime.now());
+            logList.add(log);
+        }
+        logService.saveOrUpdateBatch(logList, 5);
+        return "batch save log success";
+    }
 }
