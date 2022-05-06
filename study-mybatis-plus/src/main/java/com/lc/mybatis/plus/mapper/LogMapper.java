@@ -3,6 +3,7 @@ package com.lc.mybatis.plus.mapper;
 import com.lc.mybatis.plus.domain.Log;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.springframework.stereotype.Repository;
 
 /**
  * <p>
@@ -12,7 +13,7 @@ import org.apache.ibatis.annotations.Mapper;
  * @author gujixian
  * @since 2022-05-05
  */
-@Mapper
+@Repository
 public interface LogMapper extends BaseMapper<Log> {
 
 }
