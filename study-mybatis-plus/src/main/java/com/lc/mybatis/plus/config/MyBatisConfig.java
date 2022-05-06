@@ -20,8 +20,8 @@ import javax.sql.DataSource;
 
 /**
  * MyBatis基础配置
- *
- * Created by admin on 2016/5/12.
+ * @author gujixian
+ * @since 2022-05-06
  */
 @Configuration
 @EnableTransactionManagement
