@@ -22,7 +22,7 @@ import lombok.Setter;
 public class Staff {
 
     /**
-     * 员工股id
+     * 员工id
      */
     @TableId(value = "staff_id", type = IdType.AUTO)
     private Long staffId;
@@ -40,13 +40,13 @@ public class Staff {
     private String password;
 
     /**
-     * 状态（0有效，1无效）
+     * 人员状态（0-无效，1-有效）
      */
     @TableField("status")
     private Integer status;
 
     /**
-     * 系统状态（0 启用，1停用）
+     * 登录状态（0-禁止，1-允许）
      */
     @TableField("system_status")
     private Integer systemStatus;
