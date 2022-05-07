@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-06
+ * @since 2022-05-07
  */
 @Getter
 @Setter
@@ -52,10 +52,10 @@ public class Staff {
     private Integer systemStatus;
 
     /**
-     * 归属组织
+     * 姓名
      */
-    @TableField("org_id")
-    private Long orgId;
+    @TableField("name")
+    private String name;
 
     /**
      * 数据权限（查看组织）
@@ -64,10 +64,10 @@ public class Staff {
     private String orgIds;
 
     /**
-     * 姓名
+     * 归属组织
      */
-    @TableField("name")
-    private String name;
+    @TableField("org_id")
+    private Long orgId;
 
     /**
      * 手机号
@@ -76,7 +76,7 @@ public class Staff {
     private String phone;
 
     /**
-     * 手机号
+     * e-mail
      */
     @TableField("email")
     private String email;

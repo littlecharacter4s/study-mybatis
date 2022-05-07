@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 操作记录表 前端控制器
+ * 员工组织关系表 前端控制器
  * </p>
  *
  * @author gujixian
  * @since 2022-05-07
  */
 @RestController
-@RequestMapping("/log")
-public class LogController {
+@RequestMapping("/staff-org")
+public class StaffOrgController {
 
 }

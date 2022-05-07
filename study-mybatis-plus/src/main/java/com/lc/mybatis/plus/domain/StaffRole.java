@@ -10,7 +10,7 @@ import lombok.Setter;
 
 /**
  * <p>
- * 操作记录表
+ * 员工角色关系表
  * </p>
  *
  * @author gujixian
@@ -18,38 +18,38 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@TableName("log")
-public class Log {
+@TableName("staff_role")
+public class StaffRole {
 
     /**
-     * id
+     * 员工id
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 操作行为
+     * 员工id
      */
-    @TableField("action")
-    private String action;
+    @TableField("staff_id")
+    private Long staffId;
 
     /**
-     * 操作信息
+     * 角色id
      */
-    @TableField("message")
-    private String message;
-
-    /**
-     * 操作人id
-     */
-    @TableField("operator_id")
-    private Long operatorId;
+    @TableField("role_id")
+    private Long roleId;
 
     /**
      * 创建时间
      */
     @TableField("create_time")
     private LocalDateTime createTime;
+
+    /**
+     * 更新时间
+     */
+    @TableField("update_time")
+    private LocalDateTime updateTime;
 
 
 }
