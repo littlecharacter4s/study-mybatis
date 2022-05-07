@@ -39,7 +39,7 @@ public class MyBatisGenerator {
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, projectPath + "/src/main/resources/mapper")); // 配置mapper.xml生成路径, springboot会默认扫描
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("log","staff","staff_org","staff_role") // 增加表匹配
+                    builder.addInclude("role_perm", "role_task_type") // 增加表匹配
                             // .addTablePrefix("t_") // 过滤表前缀，如：生成的实体类名UserPojo
                             .entityBuilder()
                             .disableSerialVersionUID() // 禁用生成

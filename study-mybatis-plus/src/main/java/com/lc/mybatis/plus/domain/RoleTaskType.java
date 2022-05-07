@@ -10,7 +10,7 @@ import lombok.Setter;
 
 /**
  * <p>
- * 员工组织关系表
+ * 角色任务类型关系表
  * </p>
  *
  * @author gujixian
@@ -18,44 +18,26 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-@TableName("staff_org")
-public class StaffOrg {
+@TableName("role_task_type")
+public class RoleTaskType {
 
     /**
-     * 员工id
+     * id
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
 
     /**
-     * 员工id
+     * 角色id
      */
-    @TableField("staff_id")
-    private Long staffId;
+    @TableField("role_id")
+    private Long roleId;
 
     /**
-     * 组织id
+     * 任务类型id
      */
-    @TableField("org_id")
-    private Long orgId;
-
-    /**
-     * 状态（0，在职，1离岗）
-     */
-    @TableField("status")
-    private Integer status;
-
-    /**
-     * 起始时间
-     */
-    @TableField("start_time")
-    private LocalDateTime startTime;
-
-    /**
-     * 截止时间
-     */
-    @TableField("end_time")
-    private LocalDateTime endTime;
+    @TableField("task_type_id")
+    private Long taskTypeId;
 
     /**
      * 创建时间
