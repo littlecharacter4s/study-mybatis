@@ -1,18 +1,18 @@
 package com.lc.mybatis.plus.mapper;
 
-import com.lc.mybatis.plus.domain.Staff;
+import com.lc.mybatis.plus.domain.TaskFlow;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
- * 员工信息表 Mapper 接口
+ * 目标任务流程表 Mapper 接口
  * </p>
  *
  * @author gujixian
  * @since 2022-05-13
  */
 @Mapper
-public interface StaffMapper extends BaseMapper<Staff> {
+public interface TaskFlowMapper extends BaseMapper<TaskFlow> {
 
 }

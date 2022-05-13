@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-07
+ * @since 2022-05-13
  */
 @Getter
 @Setter
@@ -90,8 +90,8 @@ public class Staff {
     /**
      * 员工职位
      */
-    @TableField("post")
-    private String post;
+    @TableField("post_code")
+    private Integer postCode;
 
     /**
      * 创建人id

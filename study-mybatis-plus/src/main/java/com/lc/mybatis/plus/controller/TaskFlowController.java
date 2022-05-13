@@ -7,14 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
- * 员工信息表 前端控制器
+ * 目标任务流程表 前端控制器
  * </p>
  *
  * @author gujixian
  * @since 2022-05-13
  */
 @RestController
-@RequestMapping("/staff")
-public class StaffController {
+@RequestMapping("/task-flow")
+public class TaskFlowController {
 
 }

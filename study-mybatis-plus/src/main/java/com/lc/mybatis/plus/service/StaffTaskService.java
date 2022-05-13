@@ -1,16 +1,16 @@
 package com.lc.mybatis.plus.service;
 
-import com.lc.mybatis.plus.domain.Staff;
+import com.lc.mybatis.plus.domain.StaffTask;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * 员工信息表 服务类
+ * 人员目标任务表 服务类
  * </p>
  *
  * @author gujixian
  * @since 2022-05-13
  */
-public interface StaffService extends IService<Staff> {
+public interface StaffTaskService extends IService<StaffTask> {
 
 }
