@@ -1,16 +1,16 @@
 package com.lc.mybatis.plus.service;
 
-import com.lc.mybatis.plus.domain.TaskFlow;
+import com.lc.mybatis.plus.domain.Permissions;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
  * <p>
- * 目标任务流程表 服务类
+ * 权限信息表 服务类
  * </p>
  *
  * @author gujixian
  * @since 2022-05-16
  */
-public interface TaskFlowService extends IService<TaskFlow> {
+public interface PermissionsService extends IService<Permissions> {
 
 }

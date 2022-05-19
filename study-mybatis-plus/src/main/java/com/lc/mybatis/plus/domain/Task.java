@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-13
+ * @since 2022-05-19
  */
 @Getter
 @Setter
@@ -40,30 +40,6 @@ public class Task {
     private Long typeId;
 
     /**
-     * 目标设定部门id
-     */
-    @TableField("source_org_id")
-    private Long sourceOrgId;
-
-    /**
-     * 目标设定部门名称
-     */
-    @TableField("source_org_name")
-    private Long sourceOrgName;
-
-    /**
-     * 目标部门id
-     */
-    @TableField("target_org_id")
-    private Long targetOrgId;
-
-    /**
-     * 目标部门名称
-     */
-    @TableField("target_org_name")
-    private Long targetOrgName;
-
-    /**
      * 目标内容
      */
     @TableField("content")
@@ -74,6 +50,12 @@ public class Task {
      */
     @TableField("expire_time")
     private LocalDateTime expireTime;
+
+    /**
+     * 扩展信息
+     */
+    @TableField("extend_info")
+    private String extendInfo;
 
     /**
      * 创建人id

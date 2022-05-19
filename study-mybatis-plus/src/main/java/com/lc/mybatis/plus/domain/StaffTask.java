@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-13
+ * @since 2022-05-17
  */
 @Getter
 @Setter
@@ -64,40 +64,10 @@ public class StaffTask {
     private Integer functionCode;
 
     /**
-     * 状态
-     */
-    @TableField("status")
-    private Integer status;
-
-    /**
-     * 文件地址
-     */
-    @TableField("file_url")
-    private String fileUrl;
-
-    /**
-     * 备注
-     */
-    @TableField("remark")
-    private String remark;
-
-    /**
      * 是否有效：0-无效，1-有效
      */
     @TableField("valid")
     private Integer valid;
-
-    /**
-     * 创建人id
-     */
-    @TableField("creator_id")
-    private Long creatorId;
-
-    /**
-     * 操作人id
-     */
-    @TableField("operator_id")
-    private Long operatorId;
 
     /**
      * 创建时间
@@ -110,6 +80,12 @@ public class StaffTask {
      */
     @TableField("update_time")
     private LocalDateTime updateTime;
+
+    /**
+     * 是否在相关人列表展示
+     */
+    @TableField("is_show")
+    private Integer isShow;
 
 
 }

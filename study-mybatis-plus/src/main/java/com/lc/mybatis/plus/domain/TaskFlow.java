@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-13
+ * @since 2022-05-16
  */
 @Getter
 @Setter
@@ -34,28 +34,46 @@ public class TaskFlow {
     private Long taskId;
 
     /**
-     * 操作人id
+     * 员工id
      */
-    @TableField("operator_id")
-    private Long operatorId;
+    @TableField("staff_id")
+    private Long staffId;
 
     /**
-     * 职能
+     * 员工所在任务职能
      */
     @TableField("function_code")
     private Integer functionCode;
 
     /**
-     * 职能
+     * 任务步骤
      */
     @TableField("flow_code")
     private Integer flowCode;
 
     /**
-     * 状态
+     * 顺序
+     */
+    @TableField("order")
+    private Integer order;
+
+    /**
+     * 状态（0-初始化，1，已完成）
      */
     @TableField("status")
     private Integer status;
+
+    /**
+     * 文件地址
+     */
+    @TableField("file_url")
+    private String fileUrl;
+
+    /**
+     * 节点内容信息
+     */
+    @TableField("content")
+    private String content;
 
     /**
      * 创建时间
