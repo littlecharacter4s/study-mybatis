@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-31
+ * @since 2022-06-04
  */
 @Getter
 @Setter
@@ -40,10 +40,10 @@ public class Notice {
     private String content;
 
     /**
-     * 附件url
+     * 附件
      */
-    @TableField("file_url")
-    private String fileUrl;
+    @TableField("file_info")
+    private String fileInfo;
 
     /**
      * 组织id

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-31
+ * @since 2022-06-04
  */
 @RestController
 @RequestMapping("/notice")
