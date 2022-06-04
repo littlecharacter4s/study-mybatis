@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-16
+ * @since 2022-06-03
  */
 @Getter
 @Setter
@@ -40,6 +40,24 @@ public class TaskFlow {
     private Long staffId;
 
     /**
+     * 人员名称
+     */
+    @TableField("staff_name")
+    private String staffName;
+
+    /**
+     * 组织id
+     */
+    @TableField("org_id")
+    private Long orgId;
+
+    /**
+     * 组织名称
+     */
+    @TableField("org_name")
+    private String orgName;
+
+    /**
      * 员工所在任务职能
      */
     @TableField("function_code")
@@ -52,13 +70,13 @@ public class TaskFlow {
     private Integer flowCode;
 
     /**
-     * 顺序
+     * 流程顺序
      */
-    @TableField("order")
-    private Integer order;
+    @TableField("flow_order")
+    private Integer flowOrder;
 
     /**
-     * 状态（0-初始化，1，已完成）
+     * 状态（0-初始化，1-待完成，2-已完成，3-已作废）
      */
     @TableField("status")
     private Integer status;
@@ -74,6 +92,12 @@ public class TaskFlow {
      */
     @TableField("content")
     private String content;
+
+    /**
+     * 操作者
+     */
+    @TableField("operator_id")
+    private Long operatorId;
 
     /**
      * 创建时间
