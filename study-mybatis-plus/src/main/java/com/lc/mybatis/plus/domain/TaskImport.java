@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-06-02
+ * @since 2022-06-18
  */
 @Getter
 @Setter
@@ -32,6 +32,12 @@ public class TaskImport {
      */
     @TableField("file_url")
     private String fileUrl;
+
+    /**
+     * 任务类型
+     */
+    @TableField("task_category")
+    private Integer taskCategory;
 
     /**
      * 导入目标数量
@@ -52,7 +58,7 @@ public class TaskImport {
     private Integer failureCount;
 
     /**
-     * 导入结果（0-导入中，1-导入成功，2-导入失败）
+     * 导入结果（1-导入中，2-导入成功，3-导入失败）
      */
     @TableField("result")
     private Integer result;

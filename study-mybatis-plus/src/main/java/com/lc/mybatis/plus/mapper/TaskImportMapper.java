@@ -10,7 +10,7 @@ import org.apache.ibatis.annotations.Mapper;
  * </p>
  *
  * @author gujixian
- * @since 2022-06-02
+ * @since 2022-06-18
  */
 @Mapper
 public interface TaskImportMapper extends BaseMapper<TaskImport> {

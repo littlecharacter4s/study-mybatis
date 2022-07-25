@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-05-19
+ * @since 2022-06-18
  */
 @Getter
 @Setter
@@ -64,6 +64,36 @@ public class Task {
     private Long creatorId;
 
     /**
+     * 创建人姓名
+     */
+    @TableField("creator_name")
+    private String creatorName;
+
+    /**
+     * 创建部门id
+     */
+    @TableField("creator_org_id")
+    private Long creatorOrgId;
+
+    /**
+     * 创建部门名称
+     */
+    @TableField("creator_org_name")
+    private String creatorOrgName;
+
+    /**
+     * 执行部门id
+     */
+    @TableField("ceo_org_id")
+    private Long ceoOrgId;
+
+    /**
+     * 执行部门名称
+     */
+    @TableField("ceo_org_name")
+    private String ceoOrgName;
+
+    /**
      * 操作人id
      */
     @TableField("operator_id")
@@ -80,6 +110,12 @@ public class Task {
      */
     @TableField("update_time")
     private LocalDateTime updateTime;
+
+    /**
+     * 任务状态（0：处理中，2：已完成）
+     */
+    @TableField("status")
+    private Integer status;
 
 
 }
