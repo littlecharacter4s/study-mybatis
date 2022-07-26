@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-06-18
+ * @since 2022-07-25
  */
 @Getter
 @Setter
@@ -26,6 +26,12 @@ public class Task {
      */
     @TableId(value = "id", type = IdType.AUTO)
     private Long id;
+
+    /**
+     * 源任务id
+     */
+    @TableField("pid")
+    private Long pid;
 
     /**
      * 目标类型
