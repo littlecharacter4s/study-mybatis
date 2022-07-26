@@ -14,7 +14,7 @@ import lombok.Setter;
  * </p>
  *
  * @author gujixian
- * @since 2022-07-25
+ * @since 2022-07-26
  */
 @Getter
 @Setter
@@ -122,6 +122,12 @@ public class Task {
      */
     @TableField("status")
     private Integer status;
+
+    /**
+     * 文件地址
+     */
+    @TableField("file_url")
+    private String fileUrl;
 
 
 }
